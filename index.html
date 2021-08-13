@@ -27,10 +27,29 @@
     });
 
     let loop = GameLoop({
+      update: function() {
+        if (keyPressed('left')) {
+          sprite1.x = sprite1.x - 1;
+        }
+
+        if (keyPressed('right')) {
+          sprite1.x = sprite1.x + 1;
+        }
+
+        if (keyPressed('up')) {
+          sprite1.y = sprite1.y - 1;
+        }
+
+        if (keyPressed('down')) {
+          sprite1.y = sprite1.y + 1;
+        }
+      },
       render: function() {
         sprite1.render();
       }
     });
+
+    initKeys();
 
     loop.start();
   </script>
