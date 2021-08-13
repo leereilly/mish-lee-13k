@@ -5,4 +5,10 @@
   <body>
     <canvas width="250" height="250" id="game" style="background-color: black;"></canvas>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/kontra@7.1.3/kontra.min.js"></script>
+  <script>
+    let { GameLoop, Sprite, bindKeys, collides, init, initKeys, keyPressed, randInt } = kontra;
+
+    let { canvas } = init();
+  </script>
 </html>
