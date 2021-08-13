@@ -10,5 +10,28 @@
     let { GameLoop, Sprite, bindKeys, collides, init, initKeys, keyPressed, randInt } = kontra;
 
     let { canvas } = init();
+
+    let image1 = new Image();
+    image1.src = 'https://avatars.githubusercontent.com/u/121322?v=4'
+    image1.width = 40;
+    image1.height = 40;
+
+    let sprite1 = Sprite({
+      x: 40,
+      y: 40,
+      anchor: {
+        x: 0.5,
+        y: 0.5
+      },
+      image: image1
+    });
+
+    let loop = GameLoop({
+      render: function() {
+        sprite1.render();
+      }
+    });
+
+    loop.start();
   </script>
 </html>
