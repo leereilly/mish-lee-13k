@@ -61,6 +61,11 @@
         if (keyPressed('down')) {
           sprite1.y = sprite1.y + 1;
         }
+
+        if (collides(sprite1, sprite2)) {
+          sprite2.x = randInt(41, maxX - 40);
+          sprite2.y = randInt(41, maxY - 40);
+        }
       },
       render: function() {
         sprite1.render();
