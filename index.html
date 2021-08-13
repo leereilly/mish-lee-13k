@@ -11,6 +11,9 @@
 
     let { canvas } = init();
 
+    let maxX = 250;
+    let maxY = 250;
+
     let image1 = new Image();
     image1.src = 'https://avatars.githubusercontent.com/u/121322?v=4'
     image1.width = 40;
@@ -24,6 +27,21 @@
         y: 0.5
       },
       image: image1
+    });
+
+    let image2 = new Image();
+    image2.src = 'https://avatars.githubusercontent.com/u/36594527?v=4'
+    image2.width = 40;
+    image2.height = 40;
+
+    let sprite2 = Sprite({
+      x: randInt(0, maxX),
+      y: randInt(0, maxY),
+      anchor: {
+        x: 0.5,
+        y: 0.5
+      },
+      image: image2
     });
 
     let loop = GameLoop({
@@ -46,6 +64,7 @@
       },
       render: function() {
         sprite1.render();
+        sprite2.render();
       }
     });
 
